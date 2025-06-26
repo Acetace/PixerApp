@@ -33,7 +33,7 @@ jobs:
       run: docker rm static-container || true
 
     - name: Run new container
-      run: docker run -d -p 8080:80 --name static-container ${{ secrets.DOCKERHUB_USERNAME }}/static-site:v1
+      run: docker run -d -p 8081:80 --name static-container ${{ secrets.DOCKERHUB_USERNAME }}/static-site:v1
 
     - name: Send Email Notification
       if: always()
